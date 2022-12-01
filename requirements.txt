@@ -1,2 +1,6 @@
 -e support
 pytest
+pycodestyle
+black
+pytest-watch
+ipdb

@@ -1,30 +1,21 @@
-advent of code 2022
+[Advent of code 2022](https://adventofcode.com/2022)
 ===================
 
-https://adventofcode.com/2022
+*forked from: https://github.com/anthonywritescode/aoc2022*
 
-### stream / youtube
+## Initial Setup
+1. Fork and `git clone`
+2. Login to advent of code and [get your session cookie](https://youtu.be/CZZLCeRya74?t=197)
+3. Create `.env` file and put `session=COOKIE` inside
+4. `virtualenv venv`
+5. `source .activate.sh`
+6. `pip install -r requirements.txt`
 
-- [Streamed daily on twitch](https://twitch.tv/anthonywritescode)
-- [Streams uploaded to youtube afterwards](https://www.youtube.com/@anthonywritescode-vods)
+## Usage (each day from root)
+1. `cp day00 dayNN`
+2. `source .activate.sh`
+3. `cd dayNN`
+4. `aoc-download-input`
+5. work on `part1.py`
+6. `pt part1.py` (pytest watch with ipdb)
 
-### about
-
-for 2022, I'm planning to implement in python
-
-### timing
-
-- comparing to these numbers isn't necessarily useful
-- normalize your timing to day 1 part 1 and compare
-- alternate implementations are listed in parens
-- these timings are very non-scientific (sample size 1)
-
-```console
-$ find -maxdepth 1 -type d -name 'day*' -not -name day00 | sort | xargs --replace bash -xc 'python {}/part1.py {}/input.txt; python {}/part2.py {}/input.txt'
-+ python day01/part1.py day01/input.txt
-68787
-> 756 μs
-+ python day01/part2.py day01/input.txt
-198041
-> 789 μs
-```
