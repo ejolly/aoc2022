@@ -15,11 +15,18 @@ def compute(s: str) -> int:
     # for n in numbers:
     #     pass
 
-    # lines = s.splitlines()
-    # for line in lines:
-    #     pass
-    # TODO: implement solution here!
-    return 0
+    lines = s.splitlines()
+    total = 0
+    currMax = 0
+    for line in lines:
+        if line:
+            total += int(line)
+        else:
+            if total > currMax:
+                currMax = total
+            total = 0
+
+    return currMax
 
 
 INPUT_S = """\
